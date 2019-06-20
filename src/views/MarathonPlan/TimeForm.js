@@ -1,48 +1,103 @@
-import React from 'react';
+import React, { useState, useReducer } from 'react';
 
-function render60options() {
+function renderNOptions(start, max) {
     const optionList = [];
 
-    for (let i = 0; i < 60; i++) {
-        optionList.push(<option value={i}>{i < 10 ? `0${i}` : i}</option>)
+    for (let i = start; i <= max; i++) {
+        optionList.push(<option key={i} value={i}>{i < 10 ? `0${i}` : i}</option>)
     }
 
     return optionList;
 }
 
-const TimeForm = () => {
+function timeReducer(state, { type, payload }) {
+    switch (type) {
+        case 'setHours':
+            return { ...state, hours: payload.hours };
+        case 'setMinutes':
+            return { ...state, minutes: payload.minutes };
+        case 'setSeconds':
+            return { ...state, seconds: payload.seconds };
+        case 'getTime':
+            return parseInt(state.hours, 10) * 3600 + parseInt(state.minutes, 10) * 60 + parseInt(state.seconds, 10);
+        default:
+            return state;
+    }
+}
+
+const TimeForm = ({ onSubmit }) => {
+    // Initial state as double zero. Will be converted to 0. Prevent after to calculate empty values as zero
+    const [timeData, dispatch] = useReducer(timeReducer, { hours: '00', minutes: '00', seconds: '00' });
+    const [day, setDay] = useState(0);
+    const [month, setMonth] = useState(0);
+    const [unit, setUnit] = useState('km');
+
     return (
-        <form className="m-2">
-            <div class="form-row">
+        <form className="m-2" onSubmit={onSubmit}>
+            <div className="form-row">
                 <div className="form-group col-md-3">
-                    <p>10K time:</p>
+                    <label className="col-form-label">10K time :</label>
                 </div>
+
                 <div className="form-group col-md-2">
-                    <select className="form-control" id="exampleFormControlSelect1">
-                        <option value="0">H</option>
-                        {render60options()}
+                    <select className="form-control" value={timeData.hours} onChange={e => dispatch({ type: 'setHours', payload: { hours: e.target.value } })}>
+                        <option value="00">H</option>
+                        {renderNOptions(0, 59)}
                     </select>
                 </div>
 
                 <div className="form-group col-md-2">
-                    <select className="form-control" id="exampleFormControlSelect1">
-                        <option value="0">M</option>
-                        {render60options()}
+                    <select className="form-control" value={timeData.minutes} onChange={e => dispatch({ type: 'setMinutes', payload: { minutes: e.target.value } })}>
+                        <option value="00">M</option>
+                        {renderNOptions(0, 59)}
                     </select>
                 </div>
 
                 <div className="form-group col-md-2">
-                    <select className="form-control" id="exampleFormControlSelect1">
-                        <option value="0">S</option>
-                        {render60options()}
+                    <select className="form-control" value={timeData.seconds} onChange={e => dispatch({ type: 'setSeconds', payload: { seconds: e.target.value } })}>
+                        <option value="00">S</option>
+                        {renderNOptions(0, 59)}
                     </select>
                 </div>
 
                 <div className="form-group col-md-3">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Km</button>
-                        <button type="button" class="btn btn-secondary">Mi</button>
+                    <div className="float-right btn-group" >
+                        <button type="button" className="btn btn-secondary" disabled={unit === 'km'} onClick={() => setUnit('km')}>Km</button>
+                        <button type="button" className="btn btn-secondary" disabled={unit === 'mi'} onClick={() => setUnit('mi')}>Mi</button>
                     </div>
+                </div>
+            </div>
+            <div className="form-row">
+                <div className="form-group col-md-3">
+                    <label className="col-form-label">Race date :</label>
+                </div>
+
+                <div className="form-group col-md-2">
+                    <select className="form-control" value={day} onChange={e => setDay(e.target.value)}>
+                        <option value="0">D</option>
+                        {renderNOptions(1, 31)}
+                    </select>
+                </div>
+
+                <div className="form-group col-md-2">
+                    <select className="form-control" value={month} onChange={e => setMonth(e.target.value)}>
+                        <option value="0">M</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                </div>
+                <div className="form-group col-md-5">
+                    <button className="float-right btn btn-primary" type="submit">Calculate</button>
                 </div>
             </div>
         </form>

@@ -1,20 +1,26 @@
 import React from 'react';
 
-const PlanCalendar = () => {
+const PlanCalendar = ({ bestTenKPace, plannedMarathonPace, unit }) => {
     return (
-        <table class="table m-2">
+        <table className="table m-2">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Week</th>
+                    <th scope="col">#1 Interval training</th>
+                    <th scope="col">#2 Tempo</th>
+                    <th scope="col">#3 Long run</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">18</th>
-                    <td>Mark</td>
+                    <td>
+                        <p>
+                            10 minute warm-up<br />
+                            6 x (1 minute fast then 3 min. easy)<br />
+                            10 minute cool-down
+                        </p>
+                    </td>
                     <td>Otto</td>
                     <td>@mdo</td>
                 </tr>
