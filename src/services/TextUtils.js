@@ -8,4 +8,8 @@ export default {
 
         return `${min}:${sec}`;
     },
+
+    distanceToPrintable(floatNumber) {
+        return parseFloat((Math.round(floatNumber * 100) / 100).toFixed(2));
+    },
 };

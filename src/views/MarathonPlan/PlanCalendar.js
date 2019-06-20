@@ -51,12 +51,12 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         </p>
                     </td>
                     <td>
-                        {2 * distanceMultiplier} {prettyUnit} easy<br />
-                        {2 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
-                        {2 * distanceMultiplier} {prettyUnit} easy
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy
                     </td>
                     <td>
-                        Distance: {8 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(8 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 30 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -68,12 +68,12 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         13 minute cool-down
                     </td>
                     <td>
-                        {2 * distanceMultiplier} {prettyUnit} easy<br />
-                        {2 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
-                        {2 * distanceMultiplier} {prettyUnit} easy
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy
                     </td>
                     <td>
-                        Distance: {9 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(9 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 15 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -85,12 +85,12 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {2 * distanceMultiplier} {prettyUnit} easy<br />
-                        {3 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
-                        {1 * distanceMultiplier} {prettyUnit} easy
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(3 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy
                     </td>
                     <td>
-                        Distance: {10 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(10 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 30 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -102,12 +102,12 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {1 * distanceMultiplier} {prettyUnit} easy<br />
-                        {4 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
-                        {1 * distanceMultiplier} {prettyUnit} easy
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(4 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy
                     </td>
                     <td>
-                        Distance: {11 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(11 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 45 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -119,10 +119,10 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {5 * distanceMultiplier} {prettyUnit} @Tempo pace
+                        {TextUtils.distanceToPrintable(5 * distanceMultiplier)} {prettyUnit} @Tempo pace
                     </td>
                     <td>
-                        Distance: {12 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(12 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 45 * timeMultiplier)}-
                         {TextUtils.secondsToPrintable(plannedMarathonPace + 60 * timeMultiplier)}
                         {' '}sec/{prettyUnit}
@@ -136,12 +136,12 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {2 * distanceMultiplier} {prettyUnit} easy<br />
-                        {3 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
-                        {2 * distanceMultiplier} {prettyUnit} easy
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(3 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy
                     </td>
                     <td>
-                        Distance: {10 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(10 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 45 * timeMultiplier)}-
                         {TextUtils.secondsToPrintable(plannedMarathonPace + 60 * timeMultiplier)}
                         {' '}sec/{prettyUnit}
@@ -155,12 +155,12 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {1 * distanceMultiplier} {prettyUnit} easy<br />
-                        {4 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
-                        {1 * distanceMultiplier} {prettyUnit} easy
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(4 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy
                     </td>
                     <td>
-                        Distance: {12 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(12 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 45 * timeMultiplier)}-
                         {TextUtils.secondsToPrintable(plannedMarathonPace + 60 * timeMultiplier)}
                         {' '}sec/{prettyUnit}
@@ -174,11 +174,11 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {1 * distanceMultiplier} {prettyUnit} easy<br />
-                        {7 * distanceMultiplier} {prettyUnit} @Tempo pace
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(7 * distanceMultiplier)} {prettyUnit} @Tempo pace
                     </td>
                     <td>
-                        Distance: {13 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(13 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 15 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -190,11 +190,11 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {1 * distanceMultiplier} {prettyUnit} easy<br />
-                        {6 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(6 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
                     </td>
                     <td>
-                        Distance: {14 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(14 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 30 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -207,11 +207,11 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        Distance: {8 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(8 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(bestTenKPace + 40 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                     <td>
-                        Distance: {12 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(12 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 20 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -219,18 +219,18 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                     <th scope="row">8</th>
                     <td>
                         10-20 minute warm-up<br />
-                        {1 * distanceMultiplier} {prettyUnit} (400m RI)<br />
-                        {2 * distanceMultiplier} {prettyUnit} (800m RI)<br />
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} (400m RI)<br />
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} (800m RI)<br />
                         2 x 800 (400m RI)<br />
                         10 minute cool-down
                     </td>
                     <td>
-                        {2 * distanceMultiplier} {prettyUnit} easy<br />
-                        {3 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
-                        {2 * distanceMultiplier} {prettyUnit} easy
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(3 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy
                     </td>
                     <td>
-                        Distance: {16 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(16 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 30 * timeMultiplier)}-
                         {TextUtils.secondsToPrintable(plannedMarathonPace + 45 * timeMultiplier)}
                         {' '}sec/{prettyUnit}
@@ -244,11 +244,11 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        Distance: {9 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(9 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(bestTenKPace + 40 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                     <td>
-                        Distance: {13 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(13 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 10 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -260,12 +260,12 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {1 * distanceMultiplier} {prettyUnit} easy<br />
-                        {4 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
-                        {1 * distanceMultiplier} {prettyUnit} easy
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(4 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy
                     </td>
                     <td>
-                        Distance: {18 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(18 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 30 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -277,11 +277,11 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {1 * distanceMultiplier} {prettyUnit} easy<br />
-                        {5 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(5 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
                     </td>
                     <td>
-                        Distance: {10 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(10 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -293,11 +293,11 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        Distance: {8 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(8 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(bestTenKPace + 40 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                     <td>
-                        Distance: {20 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(20 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace + 30 * timeMultiplier)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -309,11 +309,11 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {1 * distanceMultiplier} {prettyUnit} easy<br />
-                        {5 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(5 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
                     </td>
                     <td>
-                        Distance: {13 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(13 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -325,12 +325,12 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        {2 * distanceMultiplier} {prettyUnit} easy<br />
-                        {3 * distanceMultiplier} {prettyUnit} @Tempo pace<br />
-                        {1 * distanceMultiplier} {prettyUnit} easy
+                        {TextUtils.distanceToPrintable(2 * distanceMultiplier)} {prettyUnit} easy<br />
+                        {TextUtils.distanceToPrintable(3 * distanceMultiplier)} {prettyUnit} @Tempo pace<br />
+                        {TextUtils.distanceToPrintable(1 * distanceMultiplier)} {prettyUnit} easy
                     </td>
                     <td>
-                        Distance: {8 * distanceMultiplier}-{10 * distanceMultiplier} {prettyUnit}<br />
+                        Distance: {TextUtils.distanceToPrintable(8 * distanceMultiplier)}-{TextUtils.distanceToPrintable(10 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace)} sec/{prettyUnit}
                     </td>
                 </tr>
@@ -342,12 +342,12 @@ const PlanCalendar = ({ bestTenKTime, unit }) => {
                         10 minute cool-down
                     </td>
                     <td>
-                        Distance: {3 * distanceMultiplier} {prettyUnit} <br />
+                        Distance: {TextUtils.distanceToPrintable(3 * distanceMultiplier)} {prettyUnit} <br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace)} sec/{prettyUnit}
                     </td>
                     <td>
                         Marathon Day<br />
-                        Distance : {26.2 * distanceMultiplier} {prettyUnit}<br />
+                        Distance : {TextUtils.distanceToPrintable(26.2 * distanceMultiplier)} {prettyUnit}<br />
                         Pace: {TextUtils.secondsToPrintable(plannedMarathonPace)} sec/{prettyUnit}
                     </td>
                 </tr>
