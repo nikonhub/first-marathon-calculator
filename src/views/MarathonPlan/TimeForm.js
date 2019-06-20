@@ -18,22 +18,32 @@ function timeReducer(state, { type, payload }) {
             return { ...state, minutes: payload.minutes };
         case 'setSeconds':
             return { ...state, seconds: payload.seconds };
-        case 'getTime':
-            return parseInt(state.hours, 10) * 3600 + parseInt(state.minutes, 10) * 60 + parseInt(state.seconds, 10);
         default:
             return state;
     }
 }
 
+function getTime(state) {
+    return parseInt(state.hours, 10) * 3600 + parseInt(state.minutes, 10) * 60 + parseInt(state.seconds, 10);
+};
+
 const TimeForm = ({ onSubmit }) => {
     // Initial state as double zero. Will be converted to 0. Prevent after to calculate empty values as zero
-    const [timeData, dispatch] = useReducer(timeReducer, { hours: '00', minutes: '00', seconds: '00' });
+    const [timeData, dispatch] = useReducer(timeReducer, { hours: '00', minutes: '00', seconds: '00', time: 0 });
     const [day, setDay] = useState(0);
     const [month, setMonth] = useState(0);
     const [unit, setUnit] = useState('km');
 
     return (
-        <form className="m-2" onSubmit={onSubmit}>
+        <form className="m-2" onSubmit={(e) => {
+            e.preventDefault();
+
+            onSubmit({
+                bestTenKTime: getTime(timeData),
+                raceDate: null,
+                unit,
+            });
+        }}>
             <div className="form-row">
                 <div className="form-group col-md-3">
                     <label className="col-form-label">10K time :</label>
