@@ -41,7 +41,7 @@ const PlanCalendar = ({ bestTenKTime, unit, day, month }) => {
             <div className="row">
                 <div className="col">
                     <p>
-                        Planned Marathon Pace: {TextUtils.secondsToPrintable(plannedMarathonPace)} sec / {prettyUnit}
+                        Planned Marathon Pace: {TextUtils.secondsToPrintable(plannedMarathonPace)} min/{prettyUnit}
                     </p>
                 </div>
                 <div className="col">
