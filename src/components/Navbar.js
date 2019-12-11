@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-light bg-light">
             <div className="navbar-brand">
-                <img src="/first_logo.jpg" height="30" className="d-inline-block align-top mr-3" alt="First" />
+                <img src="./first_logo.jpg" height="30" className="d-inline-block align-top mr-3" alt="First" />
                 Marathon plan
             </div>
         </nav>
