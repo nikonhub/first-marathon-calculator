@@ -1,7 +1,7 @@
 {
   "name": "first-marathon-calculator",
   "version": "0.1.0",
-  "homepage": "/first-marathon-calculator",
+  "homepage": "/first-marathon-plan",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.4.1",
